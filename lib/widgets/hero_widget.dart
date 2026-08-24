@@ -16,7 +16,21 @@ class HeroWidget extends StatelessWidget {
       color: AppPallete.colorPrimaryDark,
       child: Column(
         children: [
-          Text("user", style: TextStyle(color: AppPallete.white)),
+          Row(
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/profile.jpg"),
+                  ),
+                ),
+              ),
+              Text("user", style: TextStyle(color: AppPallete.white)),
+            ],
+          ),
           Text("Get your\nSecure Park"),
         ],
       ),
