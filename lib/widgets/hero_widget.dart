@@ -19,8 +19,8 @@ class HeroWidget extends StatelessWidget {
           Row(
             children: [
               Container(
-                width: 50,
-                height: 50,
+                width: 70,
+                height: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
@@ -28,15 +28,20 @@ class HeroWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 8),
+              SizedBox(width: 10),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Haloo",
-                    style: TextStyle(color: AppPallete.white, fontSize: 20),
+                    style: TextStyle(
+                      color: AppPallete.textSecondari,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                    ),
                   ),
                   Text(
-                    "Username",
+                    "Imam Prasetya",
                     style: TextStyle(
                       color: AppPallete.white,
                       fontWeight: FontWeight.bold,
@@ -47,8 +52,15 @@ class HeroWidget extends StatelessWidget {
               ),
             ],
           ),
-
-          Text("Get your\nSecure Park"),
+          SizedBox(height: 21),
+          Text(
+            "Get your\nSecure Park",
+            style: TextStyle(
+              color: AppPallete.white,
+              fontWeight: FontWeight.w800,
+              fontSize: 30,
+            ),
+          ),
         ],
       ),
     );
