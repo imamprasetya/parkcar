@@ -12,9 +12,10 @@ class HeroWidget extends StatelessWidget {
   Container content() {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 70),
+      padding: EdgeInsets.only(left: 16, right: 16, bottom: 55, top: 70),
       color: AppPallete.colorPrimaryDark,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
@@ -57,6 +58,7 @@ class HeroWidget extends StatelessWidget {
             "Get your\nSecure Park",
             style: TextStyle(
               color: AppPallete.white,
+              height: 1,
               fontWeight: FontWeight.w800,
               fontSize: 30,
             ),
