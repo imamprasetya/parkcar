@@ -28,9 +28,26 @@ class HeroWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              Text("user", style: TextStyle(color: AppPallete.white)),
+              SizedBox(height: 8),
+              Column(
+                children: [
+                  Text(
+                    "Haloo",
+                    style: TextStyle(color: AppPallete.white, fontSize: 20),
+                  ),
+                  Text(
+                    "Username",
+                    style: TextStyle(
+                      color: AppPallete.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
+
           Text("Get your\nSecure Park"),
         ],
       ),
