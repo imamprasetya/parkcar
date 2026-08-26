@@ -6,7 +6,7 @@ class HeroWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [content(), image()]);
+    return Stack(children: [content(), image(), search()]);
   }
 
   Container content() {
@@ -85,6 +85,32 @@ class HeroWidget extends StatelessWidget {
         'assets/images/hero.png',
         fit: BoxFit.contain,
       ),
+    );
+  }
+
+  Widget search() {
+    return Positioned(
+      bottom: 0,
+      left: 0,
+      right: 0,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: TextFormField(
+          decoration: InputDecoration(
+            hintText: "Search by name or city area",
+            filled: true,
+            fillColor: AppPallete.white,
+            enabledBorder: border(),
+            focusedBorder: border(),
+          ),
+        ),
+      ),
+    );
+  }
+
+  OutlineInputBorder border() {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(50),
     );
   }
 }
