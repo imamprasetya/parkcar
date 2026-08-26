@@ -6,13 +6,18 @@ class HeroWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [content()]);
+    return Stack(children: [content(), image()]);
   }
 
   Container content() {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.only(left: 16, right: 16, bottom: 55, top: 70),
+      padding: EdgeInsets.only(
+        left: 16,
+        right: 16,
+        bottom: 55,
+        top: 70,
+      ),
       color: AppPallete.colorPrimaryDark,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,13 +30,16 @@ class HeroWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage("assets/images/profile.jpg"),
+                    image: AssetImage(
+                      "assets/images/profile.jpg",
+                    ),
                   ),
                 ),
               ),
               SizedBox(width: 10),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment:
+                    CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Haloo",
@@ -64,6 +72,18 @@ class HeroWidget extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget image() {
+    return Positioned(
+      width: 160,
+      bottom: 54,
+      right: 0,
+      child: Image.asset(
+        'assets/images/hero.png',
+        fit: BoxFit.contain,
       ),
     );
   }

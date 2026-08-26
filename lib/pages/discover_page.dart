@@ -53,7 +53,7 @@ class DiscoverPage extends StatelessWidget {
       activeIcon: SvgPicture.asset(
         icon,
         colorFilter: ColorFilter.mode(
-          AppPallete.colorPrimaryDark,
+          AppPallete.colorPrimary,
           BlendMode.srcIn,
         ),
       ),
