@@ -11,6 +11,7 @@ class AppPallete {
   );
 
   static const colorGray = Colors.grey;
+  static const Hint = Colors.blueGrey;
   static const white = Colors.white;
   static const textSecondari = Color.fromARGB(
     255,

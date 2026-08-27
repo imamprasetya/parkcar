@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:parkcar/theme/app_pallete.dart';
 
 class HeroWidget extends StatelessWidget {
@@ -12,6 +14,7 @@ class HeroWidget extends StatelessWidget {
   Container content() {
     return Container(
       width: double.infinity,
+      margin: EdgeInsets.only(bottom: 23),
       padding: EdgeInsets.only(
         left: 16,
         right: 16,
@@ -30,16 +33,13 @@ class HeroWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage(
-                      "assets/images/profile.jpg",
-                    ),
+                    image: AssetImage("assets/images/profile.jpg"),
                   ),
                 ),
               ),
               SizedBox(width: 10),
               Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Haloo",
@@ -93,15 +93,34 @@ class HeroWidget extends StatelessWidget {
       bottom: 0,
       left: 0,
       right: 0,
-      child: Padding(
+      child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16),
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xff070626).withOpacity(.06),
+              blurRadius: 20,
+              offset: const Offset(0, 10),
+            ),
+          ],
+        ),
         child: TextFormField(
+          cursorColor: AppPallete.colorPrimary,
           decoration: InputDecoration(
             hintText: "Search by name or city area",
+            hintStyle: GoogleFonts.plusJakartaSans(
+              fontSize: 16,
+              color: AppPallete.Hint,
+            ),
             filled: true,
             fillColor: AppPallete.white,
             enabledBorder: border(),
             focusedBorder: border(),
+            suffixIcon: Align(
+              widthFactor: 1,
+              heightFactor: 1,
+              child: SvgPicture.asset("assets/svgs/search.svg"),
+            ),
           ),
         ),
       ),
@@ -111,6 +130,7 @@ class HeroWidget extends StatelessWidget {
   OutlineInputBorder border() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(50),
+      borderSide: BorderSide.none,
     );
   }
 }
