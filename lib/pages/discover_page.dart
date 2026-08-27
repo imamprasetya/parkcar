@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parkcar/theme/app_pallete.dart';
 import 'package:parkcar/widgets/hero_widget.dart';
+import 'package:parkcar/widgets/inprogres.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({super.key});
@@ -12,7 +13,10 @@ class DiscoverPage extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: bottomNavBar(),
       body: const SingleChildScrollView(
-        child: Column(children: [HeroWidget()]),
+        child: Column(children: [
+          HeroWidget(),
+          InProgresWidget(),
+          ]),
       ),
     );
   }
