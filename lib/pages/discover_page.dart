@@ -13,10 +13,13 @@ class DiscoverPage extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: bottomNavBar(),
       body: const SingleChildScrollView(
-        child: Column(children: [
-          HeroWidget(),
-          InProgresWidget(),
-          ]),
+        child: Column(
+          children: [
+            HeroWidget(),
+            SizedBox(height: 20),
+            InProgresWidget(),
+          ],
+        ),
       ),
     );
   }
@@ -37,10 +40,22 @@ class DiscoverPage extends StatelessWidget {
         fontWeight: FontWeight.w700,
       ),
       items: [
-        bottomNavBarItem(icon: 'assets/svgs/discover.svg', label: 'Home'),
-        bottomNavBarItem(icon: 'assets/svgs/orders.svg', label: 'orders'),
-        bottomNavBarItem(icon: 'assets/svgs/wallet.svg', label: 'wallet'),
-        bottomNavBarItem(icon: 'assets/svgs/setting.svg', label: 'setting'),
+        bottomNavBarItem(
+          icon: 'assets/svgs/discover.svg',
+          label: 'Home',
+        ),
+        bottomNavBarItem(
+          icon: 'assets/svgs/orders.svg',
+          label: 'orders',
+        ),
+        bottomNavBarItem(
+          icon: 'assets/svgs/wallet.svg',
+          label: 'wallet',
+        ),
+        bottomNavBarItem(
+          icon: 'assets/svgs/setting.svg',
+          label: 'setting',
+        ),
       ],
     );
   }
@@ -52,7 +67,10 @@ class DiscoverPage extends StatelessWidget {
     return BottomNavigationBarItem(
       icon: SvgPicture.asset(
         icon,
-        colorFilter: ColorFilter.mode(AppPallete.colorGray, BlendMode.srcIn),
+        colorFilter: ColorFilter.mode(
+          AppPallete.colorGray,
+          BlendMode.srcIn,
+        ),
       ),
       activeIcon: SvgPicture.asset(
         icon,

@@ -5,6 +5,6 @@ class InProgresWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Text("In Progress Widget");
   }
 }
