@@ -6,6 +6,8 @@ class InProgresWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ContainerWidget();
+    return ContainerWidget(
+      title: "In Progress Parking To",
+    );
   }
 }
