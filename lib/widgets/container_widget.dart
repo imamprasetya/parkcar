@@ -3,7 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ContainerWidget extends StatelessWidget {
   final String title;
-  const ContainerWidget({super.key, required this.title});
+  final Widget child;
+  const ContainerWidget({
+    super.key,
+    required this.title,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +16,7 @@ class ContainerWidget extends StatelessWidget {
       children: [
         header(),
         const SizedBox(height: 16),
+        child
       ],
     );
   }
