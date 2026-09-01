@@ -35,12 +35,21 @@ class InProgresWidget extends StatelessWidget {
             ),
             const SizedBox(width: 10),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "Imam Prasetya",
                   style: GoogleFonts.plusJakartaSans(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
+                    color: AppPallete.white,
+                  ),
+                ),
+                Text(
+                  "Lot 197MB",
+                  style: GoogleFonts.plusJakartaSans(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
                     color: AppPallete.white,
                   ),
                 ),
