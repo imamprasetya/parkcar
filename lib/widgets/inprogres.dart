@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parkcar/theme/app_pallete.dart';
+import 'package:parkcar/widgets/button_widget.dart';
 import 'package:parkcar/widgets/container_widget.dart';
 
 class InProgresWidget extends StatelessWidget {
@@ -55,6 +56,8 @@ class InProgresWidget extends StatelessWidget {
                 ),
               ],
             ),
+            Spacer(),
+            ButtonWidget(),
           ],
         ),
       ),
