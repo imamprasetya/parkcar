@@ -3,12 +3,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:parkcar/theme/app_pallete.dart';
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({super.key});
+  final String text;
+  final VoidCallback onTap;
+  const ButtonWidget({
+    super.key,
+    required this.text,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onTap,
       style: ElevatedButton.styleFrom(
         elevation: 0,
         backgroundColor: AppPallete.white,

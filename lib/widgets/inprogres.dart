@@ -26,6 +26,13 @@ class InProgresWidget extends StatelessWidget {
             image: AssetImage("assets/images/bg_in_progress.png"),
             fit: BoxFit.cover,
           ),
+          boxShadow: [
+            BoxShadow(
+              color: AppPallete.colorPrimary.withOpacity(0.5),
+              blurRadius: 24,
+              offset: const Offset(0, 10),
+            ),
+          ],
         ),
         child: Row(
           children: [
@@ -57,7 +64,7 @@ class InProgresWidget extends StatelessWidget {
               ],
             ),
             Spacer(),
-            ButtonWidget(),
+            ButtonWidget(text: 'Open Maps', onTap: () {}),
           ],
         ),
       ),
